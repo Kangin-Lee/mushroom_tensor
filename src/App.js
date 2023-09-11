@@ -45,31 +45,34 @@ function App() {
     if (model) {
       // 버튼을 클릭할 때마다 새로운 입력 데이터를 생성하거나 사용자 입력을 받습니다.
       //const inputData = [5, 2, 4, 1, 6, 1, 0, 1, 4, 0, 3, 2, 2, 7, 7, 0, 2, 1, 4, 2, 3, 5]; // 22개의 피처 값
-      const inputData = [5,2,9,1,0,1,0,0,4,0,2,2,2,7,7,0,2,1,4,3,2,1]; // 22개의 피처 값
+      const inputData = [5, 2, 9, 1, 0, 1, 0, 0, 4, 0, 2, 2, 2, 7, 7, 0, 2, 1, 4, 3, 2, 1]; // 22개의 피처 값
       // 모델로부터 예측 수행
       const { resultText, probability } = await classifyMushroom(inputData);
 
       // 예측 결과와 확률을 표시
-      if(resultText == '독버섯'){
+      if (resultText == '독버섯') {
         setResult(`예측 결과: ${resultText}, 확률: ${probability}%`);
-      }else{
-        setResult(`예측 결과: ${resultText}, 확률: ${(1-probability)*100}%`);
+      } else {
+        setResult(`예측 결과: ${resultText}, 확률: ${(1 - probability) * 100}%`);
       }
-      
+
     }
   }
 
   return (
     <div>
       <Container>
-        <List/>
-      {/* 버섯 분류를 위한 UI */}
-      <button onClick={handlePredict}>
-        독버섯 예측
-      </button>
-      {result !== null && (
-        <p>{result}</p>
-      )}
+        <List />
+        {/* 버섯 분류를 위한 UI */}
+        <div className='result-area'>
+          <button onClick={handlePredict} className='resultBtn'>
+            결과 보기
+          </button>
+          {result !== null && (
+            <p>{result}</p>
+          )}
+        </div>
+
       </Container>
     </div>
   );
