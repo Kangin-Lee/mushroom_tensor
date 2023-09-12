@@ -61,6 +61,7 @@ function App() {
 
   return (
     <div>
+      <div className='mushroom-img'>독버섯 예측</div>
       <Container>
         <List />
         {/* 버섯 분류를 위한 UI */}

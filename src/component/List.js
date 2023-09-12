@@ -9,14 +9,13 @@ const DropdownSelector = ({ options, defaultText, onSelect }) => {
     setSelectedOption(option);
     onSelect(option);
   };
-
   return (
     <div className="list-area">
       <Dropdown>
         <Dropdown.Toggle variant="success">{defaultText}</Dropdown.Toggle>
         <Dropdown.Menu>
-          {options.map((item) => (
-            <Dropdown.Item key={item} onClick={() => handleSelect(item)}>
+          {options.map((item,index) => (
+            <Dropdown.Item key={index} onClick={() => handleSelect(item)}>
               {item}
             </Dropdown.Item>
           ))}
@@ -183,7 +182,7 @@ const List = () => {
 
 
   return (
-    <>
+    <div className="mushroomSelect-area">
       <div className="select-section">
         <DropdownSelector
           options={capShapeOptions}
@@ -196,8 +195,7 @@ const List = () => {
           defaultText="모자 표면"
           onSelect={handleCapSurfaceSelect}
         />
-      </div>
-      <div className="select-section">
+
         <DropdownSelector
           options={capColorOptions}
           defaultText="모자 색상"
@@ -209,8 +207,7 @@ const List = () => {
           defaultText="상처 유무"
           onSelect={handleBruisesSelect}
         />
-      </div>
-      <div className="select-section">
+
         <DropdownSelector
           options={odor}
           defaultText="냄새"
@@ -222,8 +219,7 @@ const List = () => {
           defaultText="혓(gill) 붙임 여부"
           onSelect={handleGillAttachSelect}
         />
-      </div>
-      <div className="select-section">
+
         <DropdownSelector
           options={gillSpacing}
           defaultText="혓(gill) 간격"
@@ -235,9 +231,7 @@ const List = () => {
           defaultText="혓(gill) 크기"
           onSelect={handleGillSizeSelect}
         />
-      </div>
 
-      <div className="select-section">
         <DropdownSelector
           options={gillColor}
           defaultText="혓(gill) 색상"
@@ -249,23 +243,20 @@ const List = () => {
           defaultText="줄기 모양"
           onSelect={handleStalkShapeSelect}
         />
-      </div>
 
-      <div className="select-section">
         <DropdownSelector
           options={stalkRoot}
           defaultText="줄기 뿌리 모양"
           onSelect={handleStalkRootSelect}
         />
-
+        </div>
+        <div className="select-section">
         <DropdownSelector
           options={stalkSurfaceAboveRing}
           defaultText="줄기 위쪽 표면"
           onSelect={handleStalkSurfaceAboveRingSelect}
         />
-      </div>
-
-      <div className="select-section">
+      
         <DropdownSelector
           options={stalkSurfaceBelowRing}
           defaultText="줄기 아래쪽 표면"
@@ -277,9 +268,7 @@ const List = () => {
           defaultText="줄기 위쪽 색"
           onSelect={handleStalkColorAboveRingSelect}
         />
-      </div>
 
-      <div className="select-section">
         <DropdownSelector
           options={stalkColorBelowRing}
           defaultText="줄기 아래쪽 색"
@@ -291,9 +280,7 @@ const List = () => {
           defaultText="베일 타입"
           onSelect={handleVeilTypeSelect}
         />
-      </div>
 
-      <div className="select-section">
         <DropdownSelector
           options={veilColor}
           defaultText="배일 색"
@@ -305,9 +292,7 @@ const List = () => {
           defaultText="링 개수"
           onSelect={handleRingNumberSelect}
         />
-      </div>
 
-      <div className="select-section">
         <DropdownSelector
           options={ringType}
           defaultText="링 타입"
@@ -319,8 +304,7 @@ const List = () => {
           defaultText="포자 무늬 색"
           onSelect={handleSporePrintColorSelect}
         />
-      </div>
-      <div className="select-section">
+
         <DropdownSelector
           options={population}
           defaultText="밀집도"
@@ -333,7 +317,7 @@ const List = () => {
           onSelect={handleHabitatSelect}
         />
       </div>
-    </>
+    </div>
   );
 };
 

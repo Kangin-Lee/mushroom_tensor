@@ -7,13 +7,19 @@
 }
 .select-section{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    margin: 12px 0;
 }
 
-/* .list-area{
-    margin: 30px;
-} */
+.list-area{
+    margin: 10px 0;
+}
+.mushroomSelect-area{
+    display: flex;
+    justify-content: space-around;
+}
 
 .result-area{
     display: flex;
@@ -29,4 +35,13 @@
     background-color: rgb(26, 25, 25);
     color: white;
     margin: 15px 0;
+}
+
+.mushroom-img{
+    background-image: url('/public/images/mushroom.jpg');
+    height: 500px;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }
