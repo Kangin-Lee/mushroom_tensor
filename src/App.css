@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .row{
    justify-content: center;
 }
@@ -40,8 +41,45 @@
 .mushroom-img{
     background-image: url('/public/images/mushroom.jpg');
     height: 500px;
-    font-size: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
     font-weight: bold;
     color: white;
     text-align: center;
+    
+}
+
+.mushroom-img .logo{
+    font-size: 2em;
+    text-align: start;
+    padding: 10px 0 0 10px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.mushroom-img h1{
+    font-size: 4em;
+    font-weight: bold;
+    margin: 50px 0 20px 0;
+    font-family: sans-serif;
+}
+
+.mushroom-img p{
+    font-size: 2.5em;
+}
+.mushroom-img h5{
+    font-weight: bold;
+    width: 70%;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mushroom{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }

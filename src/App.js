@@ -61,8 +61,25 @@ function App() {
 
   return (
     <div>
-      <div className='mushroom-img'>독버섯 예측</div>
+      <div className='mushroom-img'>
+        <div className='logo'>
+          <div>Mushroom</div>
+          <div>Classification</div>
+        </div>
+
+        <div className='header-text'>
+          <h1>독버섯 예측</h1>
+          <p>가지고 있는 버섯의 특징을 입력해보세요.</p>
+          <h5>Mushroom Classification은 22가지 특징을 이용해 AI로 판단해 식용버섯인지 독버섯인지를 구분해냅니다.</h5>
+        </div>
+
+      </div>
+
       <Container>
+        <div className='mushroom'>
+          <img  src='/images/mushroom-img.png' />
+        </div>
+        
         <List />
         {/* 버섯 분류를 위한 UI */}
         <div className='result-area'>
