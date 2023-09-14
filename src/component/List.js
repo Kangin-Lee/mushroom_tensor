@@ -111,73 +111,119 @@ const List = () => {
   const [selectedPopulation, setSelectedPopulation] = useState(null);
   const [selectedHabitat, setSelectedHabitat] = useState(null);
 
-  const handleCapShapeSelect = (item) => {
+  const [selectedCapShapeIndex, setSelectedCapShapeIndex] = useState(null);
+  const [selectedCapSurfaceIndex, setSelectedCapSurfaceIndex] = useState(null);
+  const [selectedCapColorIndex, setSelectedCapColorIndex] = useState(null);
+  const [selectedBruisesIndex, setSelectedBruisesIndex] = useState(null);
+  const [selectedOdorIndex, setSelectedOdorIndex] = useState(null);
+  const [selectedGillAttachIndex, setSelectedGillAttachIndex] = useState(null);
+  const [selectedGillSpacingIndex, setSelectedGillSpacingIndex] = useState(null);
+  const [selectedGillSizeIndex, setSelectedGillSizeIndex] = useState(null);
+  const [selectedGillColorIndex, setSelectedGillColorIndex] = useState(null);
+  const [selectedStalkShapeIndex, setSelectedStalkShapeIndex] = useState(null);
+  const [selectedStalkRootIndex, setSelectedStalkRootIndex] = useState(null);
+  const [selectedStalkSurfaceAboveRingIndex, setSelectedStalkSurfaceAboveRingIndex] = useState(null);
+  const [selectedStalkSurfaceBelowRingIndex, setSelectedStalkSurfaceBelowRingIndex] = useState(null);
+  const [selectedStalkColorAboveRingIndex, setSelectedStalkColorAboveRingIndex] = useState(null);
+  const [selectedStalkColorBelowRingIndex, setSelectedStalkColorBelowRingIndex] = useState(null);
+  const [selectedVeilTypeIndex, setSelectedVeilTypeIndex] = useState(null);
+  const [selectedVeilColorIndex, setSelectedVeilColorIndex] = useState(null);
+  const [selectedRingNumberIndex, setSelectedRingNumberIndex] = useState(null);
+  const [selectedRingTypeIndex, setSelectedRingTypeIndex] = useState(null);
+  const [selectedSporePrintColorIndex, setSelectedSporePrintColorIndex] = useState(null);
+  const [selectedPopulationIndex, setSelectedPopulationIndex] = useState(null);
+  const [selectedHabitatIndex, setSelectedHabitatIndex] = useState(null);
+
+  const handleCapShapeSelect = (item, index) => {
     setSelectedCapShape(item);
+    setSelectedCapShapeIndex(index);
   };
 
-  const handleCapSurfaceSelect = (item) => {
+  const handleCapSurfaceSelect = (item, index) => {
     setSelectedCapSurface(item);
+    setSelectedCapSurfaceIndex(index);
   };
 
-  const handleCapColorSelect = (item) => {
+  const handleCapColorSelect = (item, index) => {
     setSelectedCapColor(item);
+    setSelectedCapColorIndex(index);
   };
-  const handleBruisesSelect = (item) => {
+
+  const handleBruisesSelect = (item, index) => {
     setSelectedBruises(item);
+    setSelectedBruisesIndex(index);
   };
-  const handleOdorSelect = (item) => {
+  const handleOdorSelect = (item, index) => {
     setSelectedOdor(item);
+    setSelectedOdorIndex(index);
   };
-  const handleGillAttachSelect = (item) => {
+  const handleGillAttachSelect = (item, index) => {
     setSelectedGillAttach(item);
+    setSelectedGillAttachIndex(index)
   };
-  const handleGillSpacingSelect = (item) => {
+  const handleGillSpacingSelect = (item, index) => {
     setSelectedGillSpacing(item);
+    setSelectedGillSpacingIndex(index)
   };
-  const handleGillSizeSelect = (item) => {
+  const handleGillSizeSelect =(item, index) => {
     setSelectedGillSize(item);
+    setSelectedGillSizeIndex(index)
   };
-  const handleGillColorSelect = (item) => {
+  const handleGillColorSelect = (item, index) => {
     setSelectedGillColor(item);
+    setSelectedGillColorIndex(index)
   };
-  const handleStalkShapeSelect = (item) => {
+  const handleStalkShapeSelect = (item, index) => {
     setSelectedStalkShape(item);
+    setSelectedStalkShapeIndex(index)
   };
-  const handleStalkRootSelect = (item) => {
+  const handleStalkRootSelect = (item, index) => {
     setSelectedStalkRoot(item);
+    setSelectedStalkRootIndex(index)
   };
-  const handleStalkSurfaceAboveRingSelect = (item) => {
+  const handleStalkSurfaceAboveRingSelect = (item, index) => {
     setSelectedStalkSurfaceAboveRing(item);
+    setSelectedStalkSurfaceAboveRingIndex(index)
   };
-  const handleStalkSurfaceBelowRingSelect = (item) => {
+  const handleStalkSurfaceBelowRingSelect = (item, index) => {
     setSelectedStalkSurfaceBelowRing(item);
+    setSelectedStalkSurfaceBelowRingIndex(index)
   };
-  const handleStalkColorAboveRingSelect = (item) => {
+  const handleStalkColorAboveRingSelect = (item, index) => {
     setSelectedStalkColorAboveRing(item);
+    setSelectedStalkColorAboveRingIndex(index)
   };
-  const handleStalkColorBelowRingSelect = (item) => {
+  const handleStalkColorBelowRingSelect = (item, index) => {
     setSelectedStalkColorBelowRing(item);
+    setSelectedStalkColorBelowRingIndex(index)
   };
-  const handleVeilTypeSelect = (item) => {
+  const handleVeilTypeSelect = (item, index) => {
     setSelectedVeilType(item);
+    setSelectedVeilTypeIndex(index)
   };
-  const handleVeilColorSelect = (item) => {
+  const handleVeilColorSelect = (item, index) => {
     setSelectedVeilColor(item);
+    setSelectedVeilColorIndex(index)
   };
-  const handleRingNumberSelect = (item) => {
+  const handleRingNumberSelect = (item, index) => {
     setSelectedRingNumber(item);
+    setSelectedRingNumberIndex(index)
   };
-  const handleRingTypeSelect = (item) => {
+  const handleRingTypeSelect = (item, index) => {
     setSelectedRingType(item);
+    setSelectedRingTypeIndex(index)
   };
-  const handleSporePrintColorSelect = (item) => {
+  const handleSporePrintColorSelect = (item, index) => {
     setSelectedSporePrintColor(item);
+    setSelectedSporePrintColorIndex(index)
   };
-  const handlePopulationSelect = (item) => {
+  const handlePopulationSelect = (item, index) => {
     setSelectedPopulation(item);
+    setSelectedPopulationIndex(index)
   };
-  const handleHabitatSelect = (item) => {
+  const handleHabitatSelect = (item, index) => {
     setSelectedHabitat(item);
+    setSelectedHabitatIndex(index)
   };
 
 
@@ -187,134 +233,134 @@ const List = () => {
         <DropdownSelector
           options={capShapeOptions}
           defaultText="모자 모양"
-          onSelect={handleCapShapeSelect}
+          onSelect={(item, index) => handleCapShapeSelect(item, index)}
         />
 
         <DropdownSelector
           options={capSurfaceOptions}
           defaultText="모자 표면"
-          onSelect={handleCapSurfaceSelect}
+          onSelect={(item, index) => handleCapSurfaceSelect(item, index)}
         />
 
         <DropdownSelector
           options={capColorOptions}
           defaultText="모자 색상"
-          onSelect={handleCapColorSelect}
+          onSelect={(item, index) => handleCapColorSelect(item, index)}
         />
 
         <DropdownSelector
           options={bruises}
           defaultText="상처 유무"
-          onSelect={handleBruisesSelect}
+          onSelect={(item, index) => handleBruisesSelect(item, index)}
         />
 
         <DropdownSelector
           options={odor}
           defaultText="냄새"
-          onSelect={handleOdorSelect}
+          onSelect={(item, index) => handleOdorSelect(item, index)}
         />
 
         <DropdownSelector
           options={gillAttach}
           defaultText="혓(gill) 붙임 여부"
-          onSelect={handleGillAttachSelect}
+          onSelect={(item, index) => handleGillAttachSelect(item, index)}
         />
-
+{/* ================================================================================ */}
         <DropdownSelector
           options={gillSpacing}
           defaultText="혓(gill) 간격"
-          onSelect={handleGillSpacingSelect}
+          onSelect={(item, index) => handleGillSpacingSelect(item, index)}
         />
 
         <DropdownSelector
           options={gillSize}
           defaultText="혓(gill) 크기"
-          onSelect={handleGillSizeSelect}
+          onSelect={(item, index) => handleGillSizeSelect(item, index)}
         />
 
         <DropdownSelector
           options={gillColor}
           defaultText="혓(gill) 색상"
-          onSelect={handleGillColorSelect}
+          onSelect={(item, index) => handleGillColorSelect(item, index)}
         />
 
         <DropdownSelector
           options={stalkShape}
           defaultText="줄기 모양"
-          onSelect={handleStalkShapeSelect}
+          onSelect={(item, index) => handleStalkShapeSelect(item, index)}
         />
 
         <DropdownSelector
           options={stalkRoot}
           defaultText="줄기 뿌리 모양"
-          onSelect={handleStalkRootSelect}
+          onSelect={(item, index) => handleStalkRootSelect(item, index)}
         />
         </div>
         <div className="select-section">
         <DropdownSelector
           options={stalkSurfaceAboveRing}
           defaultText="줄기 위쪽 표면"
-          onSelect={handleStalkSurfaceAboveRingSelect}
+          onSelect={(item, index) => handleStalkSurfaceAboveRingSelect(item, index)}
         />
       
         <DropdownSelector
           options={stalkSurfaceBelowRing}
           defaultText="줄기 아래쪽 표면"
-          onSelect={handleStalkSurfaceBelowRingSelect}
+          onSelect={(item, index) => handleStalkSurfaceBelowRingSelect(item, index)}
         />
 
         <DropdownSelector
           options={stalkColorAboveRing}
           defaultText="줄기 위쪽 색"
-          onSelect={handleStalkColorAboveRingSelect}
+          onSelect={(item, index) => handleStalkColorAboveRingSelect(item, index)}
         />
 
         <DropdownSelector
           options={stalkColorBelowRing}
           defaultText="줄기 아래쪽 색"
-          onSelect={handleStalkColorBelowRingSelect}
+          onSelect={(item, index) => handleStalkColorBelowRingSelect(item, index)}
         />
 
         <DropdownSelector
           options={veilType}
           defaultText="베일 타입"
-          onSelect={handleVeilTypeSelect}
+          onSelect={(item, index) => handleVeilTypeSelect(item, index)}
         />
 
         <DropdownSelector
           options={veilColor}
           defaultText="배일 색"
-          onSelect={handleVeilColorSelect}
+          onSelect={(item, index) => handleVeilColorSelect(item, index)}
         />
 
         <DropdownSelector
           options={ringNumber}
           defaultText="링 개수"
-          onSelect={handleRingNumberSelect}
+          onSelect={(item, index) => handleRingNumberSelect(item, index)}
         />
 
         <DropdownSelector
           options={ringType}
           defaultText="링 타입"
-          onSelect={handleRingTypeSelect}
+          onSelect={(item, index) => handleRingTypeSelect(item, index)}
         />
 
         <DropdownSelector
           options={sporePrintColor}
           defaultText="포자 무늬 색"
-          onSelect={handleSporePrintColorSelect}
+          onSelect={(item, index) => handleSporePrintColorSelect(item, index)}
         />
 
         <DropdownSelector
           options={population}
           defaultText="밀집도"
-          onSelect={handlePopulationSelect}
+          onSelect={(item, index) => handlePopulationSelect(item, index)}
         />
 
         <DropdownSelector
           options={habitat}
           defaultText="서식지"
-          onSelect={handleHabitatSelect}
+          onSelect={(item, index) => handleHabitatSelect(item, index)}
         />
       </div>
     </div>
